@@ -13,7 +13,7 @@ Beachte aber bitte, dass das PAsswort hier im Klartext steht!! Die Datei sollte 
 ## Installation
 1. Klone das Repository:
     ```sh
-    git clone https://github.com/deinbenutzername/server-backup-script.git
+    git clone https://github.com/BoBBer446/rsync_backupscript.git
     ```
 2. Navigiere zum Skriptverzeichnis:
     ```sh
