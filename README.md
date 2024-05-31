@@ -1,15 +1,16 @@
 ## Beschreibung
-
 Dieses Repository enthält ein Bash-Skript zur automatisierten Sicherung wichtiger Verzeichnisse von Servern auf ein NAS-Gerät oder andere remote Server. Das Skript unterstützt mehrere Server und ermöglicht die Verwaltung von Backup-Retention sowie Logdateien. 
 Es ist darauf ausgelegt, tägliche Backups durchzuführen und alte Backups sowie Logdateien automatisch zu löschen, um Speicherplatz zu sparen.
 
-## Voraussetzungen
+## Vorteile des Scripts
+Der Vorteil ist, dass du das Script auf jeden deiner Server austeilen kannst. Du kannst es einfach verwenden  sofern der Zielserver die gleichen Zugangsdaten verwendet.
+Beachte aber bitte, dass das PAsswort hier im Klartext steht!! Die Datei sollte also **nur für root ausführbar und lesbar** sein. Zukünftig möchte ich da Script ändern, sodass es wenigstens verschlüsselt ist. Für heute ist es so wie es ist.
 
+## Voraussetzungen
 - `sshpass`: Zum automatischen Übergeben des Passworts für SSH.
 - `rsync`: Zum effizienten Kopieren und Synchronisieren von Dateien.
 
 ## Installation
-
 1. Klone das Repository:
     ```sh
     git clone https://github.com/deinbenutzername/server-backup-script.git
@@ -25,7 +26,6 @@ Es ist darauf ausgelegt, tägliche Backups durchzuführen und alte Backups sowie
     ```
 
 ## Konfiguration
-
 Das Skript verwendet mehrere Konfigurationsvariablen, die an den Anfang des Skripts gesetzt werden sollten:
 
 ```bash
@@ -55,7 +55,6 @@ declare -A SRC_PATHS_MAP=(
 ```
 
 ## Verwendung
-
 1. Passe die `Konfigurationsvariablen` und das `SRC_PATHS_MAP` an deine Bedürfnisse an.
 2. Führe das Skript manuell aus, um sicherzustellen, dass es funktioniert:
     ```sh
@@ -63,7 +62,6 @@ declare -A SRC_PATHS_MAP=(
     ```
 
 ## Automatisierung mit Cron
-
 Um das Skript täglich um Mitternacht automatisch auszuführen, füge es zur `crontab` hinzu:
 
 ```sh
@@ -77,11 +75,9 @@ Füge folgende Zeile hinzu:
 ```
 
 ## Fehlerbehebung
-
 - Stelle sicher, dass `sshpass` und `rsync` installiert sind.
 - Überprüfe die Berechtigungen und den Pfad des Skripts.
 - Schaue dir die Logdateien im definierten Logverzeichnis an, um detaillierte Fehlermeldungen zu erhalten.
 
 ## Lizenz
-
 Dieses Projekt ist unter der Apache License 2.0 lizenziert.
