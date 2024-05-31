@@ -17,7 +17,7 @@ Beachte aber bitte, dass das PAsswort hier im Klartext steht!! Die Datei sollte 
     ```
 2. Navigiere zum Skriptverzeichnis:
     ```sh
-    cd server-backup-script
+    cd rsync_backupscript
     ```
 
 3. Stelle sicher, dass das Skript ausführbar ist:
